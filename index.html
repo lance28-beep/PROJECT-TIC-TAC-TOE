@@ -6,11 +6,28 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="dist/output.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
  <title>Document</title>
 </head>
 
-<body>
- <h1>Hello world</h1>
+<body class="h-screen bg-[#41228E] font-fredoka">
+ <div class="container px-4">
+  <div class="flex flex-row justify-center">
+   <h1 class="text-4xl font-bold text-[#F54EA2] underline mt-2">tic-tac-toe</h1>
+  </div>
+  <div class="flex flex-col w-1/2">
+   <label for="Diffulty">Select Difficulty:</label>
+   <select id="cars" class="bg-[#A94CAF] p-2 m-1">
+    <option value="Easy">Easy</option>
+    <option value="Medium">Medium</option>
+    <option value="Impossible">Impossible</option>
+    <option value="friend" selected>Play against a friend</option>
+   </select>
+  </div>
+ </div>
+
 
 </body>
 

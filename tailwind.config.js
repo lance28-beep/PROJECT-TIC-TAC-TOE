@@ -1,7 +1,11 @@
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: ['./*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        fredoka: "'Fredoka One',cursive",
+      },
+    },
   },
   plugins: [],
 }

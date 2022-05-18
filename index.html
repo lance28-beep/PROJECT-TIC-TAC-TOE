@@ -17,17 +17,70 @@
   <div class="flex flex-row justify-center">
    <h1 class="text-4xl font-bold text-[#F54EA2] underline mt-2">tic-tac-toe</h1>
   </div>
-  <div class="flex flex-col w-1/2">
-   <label for="Diffulty">Select Difficulty:</label>
-   <select id="cars" class="bg-[#A94CAF] p-2 m-1">
-    <option value="Easy">Easy</option>
-    <option value="Medium">Medium</option>
-    <option value="Impossible">Impossible</option>
-    <option value="friend" selected>Play against a friend</option>
-   </select>
+  <div class="flex flex-row">
+   <div class="flex flex-col justify-center items-start w-1/2 h-[120px]">
+    <label for="Diffulty" class="text-[#F54EA2]">Select Difficulty:</label>
+    <select id="cars" class="bg-[#A94CAF] text-[#F54EA2] rounded p-2 pt-2">
+     <option value="Easy">Easy</option>
+     <option value="Medium">Medium</option>
+     <option value="Impossible">Impossible</option>
+     <option value="friend" selected>Play against a friend</option>
+    </select>
+   </div>
+   <div class="flex flex-col justify-center items-end h-[100px] w-1/2 border-orange-600">
+    <div class=" relative h-auto w-20 ">
+     <div class="absolute flex justify-center items-center flex-col right-20 top-4">
+      <p class="text-2xl text-[#F54EA2]">0</p>
+      <p class="text-[#F54EA2]">Score</p>
+     </div>
+     <img class="w-full h-auto object-cover" src="img/computer.png" alt="robot">
+     <p class="text-[#F54EA2] flex justify-center items-center w-full uppercase">Robot</p>
+     <div
+      class="w-[40px] h-[40px] text-3xl bg-[#F54EA2] flex justify-center items-center rounded-full text-[#A94CAF] absolute bottom-8 left-14">
+      <p>O</p>
+     </div>
+    </div>
+   </div>
   </div>
  </div>
-
+ <div class="mt-2 grid grid-cols-3 h-[350px] mx-1 border-2 border-rose-600 ">
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+ </div>
+ <div class="container px-4 mt-3">
+  <div class="flex flex-row">
+   <div class="flex flex-col justify-center items-start w-1/2 h-[120px]">
+    <label for="Diffulty" class="text-[#F54EA2]">Select Difficulty:</label>
+    <select id="cars" class="bg-[#A94CAF] text-[#F54EA2] rounded p-2 pt-2">
+     <option value="Easy">Easy</option>
+     <option value="Medium">Medium</option>
+     <option value="Impossible">Impossible</option>
+     <option value="friend" selected>Play against a friend</option>
+    </select>
+   </div>
+   <div class="flex flex-col justify-center items-end h-[100px] w-1/2 border-orange-600">
+    <div class=" relative h-auto w-20 ">
+     <div class="absolute flex justify-center items-center flex-col right-20 top-4">
+      <p class="text-2xl text-[#F54EA2]">0</p>
+      <p class="text-[#F54EA2]">Score</p>
+     </div>
+     <img class="w-full h-auto object-cover" src="img/computer.png" alt="robot">
+     <p class="text-[#F54EA2] flex justify-center items-center w-full uppercase">Robot</p>
+     <div
+      class="w-[40px] h-[40px] text-3xl bg-[#F54EA2] flex justify-center items-center rounded-full text-[#A94CAF] absolute bottom-8 left-14">
+      <p>O</p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
 
 </body>
 

@@ -1,0 +1,28 @@
+{
+  "name": "project-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i input.css -o dist/output.css",
+    "watch": "tailwindcss -i input.css -o dist/output.css --watch",
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lance28-beep/PROJECT-TIC-TAC-TOE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lance28-beep/PROJECT-TIC-TAC-TOE/issues"
+  },
+  "homepage": "https://github.com/lance28-beep/PROJECT-TIC-TAC-TOE#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24",
+    "vite": "^2.9.9"
+  }
+}

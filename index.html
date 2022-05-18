@@ -5,72 +5,83 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Favicon -->
- <link rel="apple-touch-icon" sizes="180x180" href="dist/css/img/apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="dist/css/img/favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="dist/css/img/favicon-16x16.png">
- <!--==================== UNICONS ====================-->
- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
- <!-- local style -->
- <link rel="manifest" href="dist/css/img/site.webmanifest">
-
- <title>tic-tac-toe</title>
+ <link rel="stylesheet" href="dist/output.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+ <title>Document</title>
 </head>
 
-<body>
- <div class="container">
-  <header>0
-   <h1>tic-tac-toe</h1>
-  </header>
-  <div class="level">
-   <label for="select_difficulty">Select Difficulty :</label>
-   <select id="select_difficulty" name="select_difficulty">
-    <option value="Easy">Easy</option>
-    <option value="Medium">Medium</option>
-    <option value="Impossible">Impossible</option>
-    <option value="play_against_a_friend">Play against a friend</option>
-   </select>
+<body class="h-screen bg-[#41228E] font-fredoka">
+ <div class="container px-4">
+  <div class="flex flex-row justify-center">
+   <h1 class="text-4xl font-bold text-[#F54EA2] underline mt-2">tic-tac-toe</h1>
   </div>
-  <div class="ai_avatar">
-   <div class="img-container">x
-    <div class="weapon">x</div>
+  <div class="flex flex-row">
+   <div class="flex flex-col justify-center items-start w-1/2 h-[120px]">
+    <label for="Diffulty" class="text-[#F54EA2]">Select Difficulty:</label>
+    <select id="cars" class="bg-[#A94CAF] text-[#F54EA2] rounded p-2 pt-2">
+     <option value="Easy">Easy</option>
+     <option value="Medium">Medium</option>
+     <option value="Impossible">Impossible</option>
+     <option value="friend" selected>Play against a friend</option>
+    </select>
    </div>
-   <div class="score">
-    <div class="score_num">0</div>
-    <div class="score_label">Score</div>
-   </div>
-  </div>
-  <div class="board">
-
-  </div>
-  <button class="restart_btn">Restard</button>
-  <div class="player_avatar">
-   <div class="img-container">x
-    <div class="weapon">x</div>
-   </div>
-   <div class="score">
-    <div class="score_num">0</div>
-    <div class="score_label">Score:</div>
+   <div class="flex flex-col justify-center items-end h-[100px] w-1/2 border-orange-600">
+    <div class=" relative h-auto w-20 ">
+     <div class="absolute flex justify-center items-center flex-col right-20 top-4">
+      <p class="text-2xl text-[#F54EA2]">0</p>
+      <p class="text-[#F54EA2]">Score</p>
+     </div>
+     <img class="w-full h-auto object-cover" src="img/computer.png" alt="robot">
+     <p class="text-[#F54EA2] flex justify-center items-center w-full uppercase">Robot</p>
+     <div
+      class="w-[40px] h-[40px] text-3xl bg-[#F54EA2] flex justify-center items-center rounded-full text-[#A94CAF] absolute bottom-8 left-14">
+      <p>O</p>
+     </div>
+    </div>
    </div>
   </div>
-  <footer>
-   <div class="social-icons">
-    <i class="uil uil-github footer__icons">
-     <a href="https://github.com/lance28-beep"></a>
-    </i>
-    <i class="uil uil-linkedin footer__icons">
-     <a href="https://www.linkedin.com/in/rolando-valle-43159b199/"></a>
-    </i>
-    <i class="uil uil-twitter footer__icons">
-     <a href="https://twitter.com/valle_lance"></a>
-    </i>
-    <i class="uil uil-facebook footer__icons">
-     <a href="https://www.facebook.com/profile.php?id=100071010561360"></a>
-    </i>
-   </div>
-   <p>Created by <a href="http://">Lance Valle</a> for <a href="http://">The Odin Project</a></p>
-  </footer>
  </div>
+ <div class="mt-2 grid grid-cols-3 h-[350px] mx-1 border-2 border-rose-600 ">
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+  <div class="border-2 border-rose-600"></div>
+ </div>
+ <div class="container px-4 mt-3">
+  <div class="flex flex-row">
+   <div class="flex flex-col justify-center items-start w-1/2 h-[120px]">
+    <label for="Diffulty" class="text-[#F54EA2]">Select Difficulty:</label>
+    <select id="cars" class="bg-[#A94CAF] text-[#F54EA2] rounded p-2 pt-2">
+     <option value="Easy">Easy</option>
+     <option value="Medium">Medium</option>
+     <option value="Impossible">Impossible</option>
+     <option value="friend" selected>Play against a friend</option>
+    </select>
+   </div>
+   <div class="flex flex-col justify-center items-end h-[100px] w-1/2 border-orange-600">
+    <div class=" relative h-auto w-20 ">
+     <div class="absolute flex justify-center items-center flex-col right-20 top-4">
+      <p class="text-2xl text-[#F54EA2]">0</p>
+      <p class="text-[#F54EA2]">Score</p>
+     </div>
+     <img class="w-full h-auto object-cover" src="img/computer.png" alt="robot">
+     <p class="text-[#F54EA2] flex justify-center items-center w-full uppercase">Robot</p>
+     <div
+      class="w-[40px] h-[40px] text-3xl bg-[#F54EA2] flex justify-center items-center rounded-full text-[#A94CAF] absolute bottom-8 left-14">
+      <p>O</p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
 </body>
 
 </html>

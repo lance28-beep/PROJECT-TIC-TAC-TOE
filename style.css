@@ -58,6 +58,16 @@ main {
   background: var(--secondaryColor);
 }
 
+.board .field.clicked.highlight {
+  background: red;
+  color: yellow;
+}
+
+.board .field.clicked.draw {
+  background: gray;
+  color: gainsboro;
+}
+
 .field:hover {
   background: var(--secondaryColor);
 }

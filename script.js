@@ -1,76 +1,20 @@
-// const X = [].sort((a, b) => {
-//   return a - b
-// })
-
-// const O = [].sort((a, b) => {
-//   return a - b
-// })
-
-// function calculateWinner(squares) {
-//   const lines = [
-//     [0, 1, 2],
-//     [3, 4, 5],
-//     [6, 7, 8],
-//     [0, 3, 6],
-//     [1, 4, 7],
-//     [2, 5, 8],
-//     [0, 4, 8],
-//     [2, 4, 6],
-//   ]
-//   for (let i = 0; i < lines.length; i++) {
-//     const [a, b, c] = lines[i]
-//     // console.log([a, b, c])
-//     // console.log(squares)
-//     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-//       console.log(squares[a])
-//       return squares[a]
-//     }
-//   }
-//   return null
-// }
-
-// const player = (mark, turn) => {
-//   return { mark, turn }
-// }
-
-// const playerX = player('X', true)
-// const playerO = player('O', false)
-
-// const fields = document.querySelectorAll('.field')
-// fields.forEach((field) => {
-//   field.addEventListener('click', (e) => {
-//     if (playerX.turn == true && field.textContent == '') {
-//       X.push(Number(e.target.id))
-//       field.textContent = playerX.mark
-//       field.classList.add('clicked')
-//       // console.log(X)
-//       calculateWinner(X)
-//       playerX.turn = false
-//       playerO.turn = true
-//     }
-
-//     if (playerO.turn == true && field.textContent == '') {
-//       O.push(Number(e.target.id))
-//       field.textContent = playerO.mark
-//       field.classList.add('clicked')
-//       // console.log(O)
-//       calculateWinner(O)
-//       playerX.turn = true
-//       playerO.turn = false
-//     }
-
-//   })
-// })
-
 const fields = document.querySelectorAll('.field')
-const playerStatus = document.getElementById('playerStatus')
-console.log(playerStatus)
+let playerStatus = document.getElementById('playerStatus')
 
+const button = document.querySelector('#restart')
 const player = (mark, turn) => {
   return { mark, turn }
 }
+const restartGame = () => {
+  board = ['', '', '', '', '', '', '', '', '']
+  playerEx.turn = true
+  playerCircle.turn = false
+  playerStatus.textContent = `${playerEx.mark}'s turn`
+}
 
-const board = ['', '', '', '', '', '', '', '', '']
+button.addEventListener('click', restartGame)
+
+let board = ['', '', '', '', '', '', '', '', '']
 const playerEx = player('X', true)
 const playerCircle = player('O', false)
 let roundWon = false
@@ -125,11 +69,16 @@ const calculateWinner = (player) => {
       continue
     }
     if (cellA == cellB && cellB == cellC) {
-      fields.forEach((i) => {
-       console.log(condition[0])
-        console.log(i)
-      })
-      if (fields) roundWon = true
+      const boxA = document
+        .getElementById(condition[0])
+        .classList.add('highlight')
+      const boxB = document
+        .getElementById(condition[1])
+        .classList.add('highlight')
+      const boxC = document
+        .getElementById(condition[2])
+        .classList.add('highlight')
+      roundWon = true
       break
     }
   }
@@ -138,6 +87,11 @@ const calculateWinner = (player) => {
     playerStatus.textContent = `Player ${player} Won`
     playerEx.turn = false
     playerCircle.turn = false
+  } else if (!board.includes('')) {
+    playerStatus.textContent = `Draw`
+    fields.forEach((i) => {
+      i.classList.add('draw')
+    })
   }
 }
 fields.forEach((field) => {

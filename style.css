@@ -35,17 +35,27 @@ main {
 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 289px;
-  height: 255px;
+  width: 300px;
+  height: 300px;
   gap: 1px;
 }
 
 .field {
   border: 1px solid gray;
   background-color: var(--primaryColor);
-  font-size: 100px;
+  padding: auto;
+  font-size: 3rem;
   text-align: center;
   cursor: pointer;
+  text-transform: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.board .field.clicked {
+  background: var(--secondaryColor);
 }
 
 .field:hover {
@@ -140,67 +150,69 @@ footer .footer__description p a {
     height: 400px;
   }
 
-  .playerScore{
+  .playerScore {
     width: 400px;
   }
-  footer .footer__description p{
-   font-size:16px;
+  footer .footer__description p {
+    font-size: 16px;
   }
-
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 992px) {
- body {
-  grid-template-rows: 150px 1fr 100px;
-}
-   header > h1 {
+  body {
+    height: 100vh;
+    grid-template-rows: 100px 1fr 100px;
+  }
+  header > h1 {
     font-size: 4rem;
     padding-top: 30px;
   }
- main{
-  position: relative;
- }
-   .board {
-    width: 600px;
-    height: 600px;
+  main {
+    position: relative;
   }
-  .playerScore{
+  .board {
+    width: 500px;
+    height: 500px;
+  }
+  .playerScore {
     width: 900px;
     position: absolute;
     top: 290px;
+    z-index: -1;
   }
   .playerScore .player h2 {
-  font-weight: 700;
-  font-size: 60px;
-  /* line-height: 48px; */
-  text-align: center;
-}
+    font-weight: 700;
+    font-size: 60px;
+    /* line-height: 48px; */
+    text-align: center;
+  }
 
-.playerScore .player p {
-  font-weight: 400;
-  margin-top: 20px;
-  font-size: 16px;
-  text-align: center;
-}
-main h2 {
-  font-weight: 400;
-  font-size: 40px;
-  margin-top:1.5rem;
-}
-footer{
-   flex-direction: row;
-   justify-content: space-between;
-}
-footer .footer__description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 1rem;
-}
-footer .footer__description p {
-  font-size: 1.2rem;
-}
-footer .social-media-icons .footer__icons {
-  transform: scale(3);
-  margin: 5px 2rem;
-}
+  .playerScore .player p {
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+  main h2 {
+    font-weight: 400;
+    font-size: 40px;
+    margin-top: 1.5rem;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .footer__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 1rem;
+  }
+  footer .footer__description p {
+    font-size: 1.2rem;
+  }
+  footer .social-media-icons .footer__icons {
+    transform: scale(3);
+    margin: 5px 2rem;
+  }
 }

@@ -1,23 +1,20 @@
 const fields = document.querySelectorAll('.field')
 let playerStatus = document.getElementById('playerStatus')
+const button = document.getElementById('restart')
 
-const button = document.querySelector('#restart')
 const player = (mark, turn) => {
   return { mark, turn }
 }
-const restartGame = () => {
-  board = ['', '', '', '', '', '', '', '', '']
-  playerEx.turn = true
-  playerCircle.turn = false
-  playerStatus.textContent = `${playerEx.mark}'s turn`
-}
 
-button.addEventListener('click', restartGame)
-
+button.addEventListener('click', e => {
+  console.log(clicked)
+})
 let board = ['', '', '', '', '', '', '', '', '']
 const playerEx = player('X', true)
 const playerCircle = player('O', false)
 let roundWon = false
+
+
 const winningCombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -44,7 +41,6 @@ const handleClick = (e) => {
     cell.textContent = playerCircle.mark
     cell.classList.add('clicked')
     board[cell.id] = playerCircle.mark
-
     playerEx.turn = true
     playerCircle.turn = false
     calculateWinner(playerCircle.mark)
@@ -97,3 +93,5 @@ const calculateWinner = (player) => {
 fields.forEach((field) => {
   field.addEventListener('click', handleClick, { once: true })
 })
+
+

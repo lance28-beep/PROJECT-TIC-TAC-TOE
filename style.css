@@ -127,6 +127,10 @@ footer .social-media-icons .footer__icons {
   transform: scale(2);
   margin: 5px 1rem;
 }
+
+footer .social-media-icons .footer__icons .uil {
+  color: black;
+}
 footer .social-media-icons .footer__icons:hover {
   color: var(--primaryColor);
   transform: scale(2.5);
